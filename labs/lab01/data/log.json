@@ -1,0 +1,68 @@
+[
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-28 11:40:43",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-28 11:40:43",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-28 11:41:17",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-28 11:41:17",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-28 11:41:44",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-28 11:41:44",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    }
+]
