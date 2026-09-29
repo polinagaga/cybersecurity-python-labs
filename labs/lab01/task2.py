@@ -1,4 +1,3 @@
-"""Завдання 2: Багаторівнева система контролю доступу."""
 
 import os
 import sys
@@ -7,7 +6,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"
 
 from shared.student import STUDENT_NAME, VARIANT_NUMBER
 
-# Вхідні дані для Варіанту 7
 users = {
     "incident_commander": {
         "role": "incident_response",
@@ -59,15 +57,14 @@ blocked_users = {"backup_service", "deactivated_svc", "policy_violation"}
 
 
 def check_access() -> None:
-    """Виводить список ресурсів та перевіряє права доступу користувачів."""
-    print(f"--- Завдання 2 | Студент: {STUDENT_NAME} | Варіант: {VARIANT_NUMBER} ---\n")
+    print(f"Завдання 2 Студент: {STUDENT_NAME} Варіант: {VARIANT_NUMBER} \n")
 
-    print("=== Перелік ресурсів системи ===")
+    print("Перелік ресурсів системи")
     for res_name, level in resources:
         level_str = security_levels[level - 1]
         print(f"Ресурс: {res_name:<25} | Рівень безпеки: {level_str}")
 
-    print("\n=== Результати перевірки доступу ===")
+    print("\nРезультати перевірки доступуі")
     all_test_users = list(users.keys()) + ["unknown_user"]
 
     for user_id in all_test_users:
