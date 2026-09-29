@@ -1,5 +1,3 @@
-"""Завдання 3: Безпечне хешування, CSV-база та JSON-логування."""
-
 import csv
 import datetime
 import functools
@@ -14,15 +12,11 @@ from shared.student import VARIANT_NUMBER
 
 
 class ValidationError(Exception):
-    """Власний виняток для помилок валідації пароля."""
-
-
-# Параметри згідно з Варіантом 7
+  pass
 HASH_ALGORITHM = "sha384"
 MIN_PASSWORD_LENGTH = 15
-SALT = str(VARIANT_NUMBER).zfill(5)  # "00007"
+SALT = str(VARIANT_NUMBER).zfill(5)
 
-# Шляхи до файлів
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 CSV_FILE = os.path.join(DATA_DIR, "users.csv")
 LOG_FILE = os.path.join(DATA_DIR, "log.json")
@@ -42,8 +36,6 @@ users_to_register = (
 
 
 def log_event(func):
-    """Декоратор для логування подій автентифікації у JSON-файл."""
-
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         username = kwargs.get("username") or (args[0] if args else "unknown")
@@ -79,13 +71,12 @@ def log_event(func):
 
 
 def generate_hash(password: str, salt: str = "00000") -> str:
-    """Генерує хеш sha384 для комбінації пароля та солі."""
     if not password or not salt:
         raise ValueError("Пароль та сіль не можуть бути порожніми!")
 
     if len(password) < MIN_PASSWORD_LENGTH:
         raise ValidationError(
-            f"Пароль коротший за мінімальну довжину ({MIN_PASSWORD_LENGTH} симв.)"
+            f"Пароль коротший за мінімальну довжину ({MIN_PASSWORD_LENGTH} символів.)"
         )
 
     salted_password = (password + salt).encode("utf-8")
@@ -93,13 +84,11 @@ def generate_hash(password: str, salt: str = "00000") -> str:
 
 
 def create_user(username: str, password: str) -> tuple:
-    """Створює кортеж (username, hash_value)."""
     hash_val = generate_hash(password, SALT)
     return (username, hash_val)
 
 
 def create_users(users_list: tuple) -> None:
-    """Створює базу даних користувачів у CSV файлі."""
     os.makedirs(DATA_DIR, exist_ok=True)
     valid_users = []
 
@@ -117,7 +106,6 @@ def create_users(users_list: tuple) -> None:
 
 
 def read_users_db() -> list:
-    """Зчитує базу даних користувачів із CSV файлу."""
     users_db = []
     with open(CSV_FILE, "r", encoding="utf-8") as f:
         reader = csv.reader(f)
@@ -130,7 +118,6 @@ def read_users_db() -> list:
 
 @log_event
 def login(username: str, password: str) -> bool:
-    """Здійснює перевірку аутентифікації користувача."""
     if not username or not password:
         raise ValueError("Логін або пароль порожні!")
 
@@ -146,19 +133,17 @@ def login(username: str, password: str) -> bool:
 
 
 def run_task3() -> None:
-    """Головна функція для виконання Завдання 3."""
-    print("=== Реєстрація користувачів та збереження в CSV ===")
+    print("Реєстрація користувачів та збереження в CSV")
     try:
         create_users(users_to_register)
 
-        print("\n=== Вміст бази даних користувачів (users.csv) ===")
+        print("\nВміст бази даних користувачів (users.csv)")
         db = read_users_db()
         print(f"{'Username':<20} | {'Password Hash (sha384)':<40}")
-        print("-" * 65)
         for u, h in db:
             print(f"{u:<20} | {h[:37]}...")
 
-        print("\n=== Спроби входу (Автентифікація) ===")
+        print("\nСпроби входу (Автентифікація)і")
         # Успішний вхід
         res1 = login(username="admin_sec", password="SuperSecretPass2026!Key1")
         print(f"Вхід admin_sec: {'Успіх' if res1 else 'Невдача'}")
