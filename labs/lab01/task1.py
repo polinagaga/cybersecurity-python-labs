@@ -1,15 +1,12 @@
-"""Завдання 1: Комплексний аналізатор надійності паролів."""
 
 import os
 import random
 import sys
 
-# Додаємо кореневу папку проекту до шляху пошуку модулів
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
 from shared.student import STUDENT_NAME, VARIANT_NUMBER
 
-# Вхідні дані для Варіанту 7
 passwords = [
     "NetworkS3c!",
     "easy",
@@ -41,14 +38,11 @@ forbidden_passwords = {
 
 
 def analyze_passwords() -> None:
-    """Оцінює надійність паролів та виводить результат у вигляді таблиці."""
-    print(f"--- Завдання 1 | Студент: {STUDENT_NAME} | Варіант: {VARIANT_NUMBER} ---")
+    print(f"Завдання 1  Студент: {STUDENT_NAME}  Варіант: {VARIANT_NUMBER} ")
 
-    # Створюємо копію списку, щоб не змінювати глобальну змінну безпосередньо
     working_passwords = list(passwords)
 
-    # Генерація 3 випадкових індексів та додавання дублікатів у кінець
-    random.seed(42)  # Для відтворюваності результатів
+    random.seed(42)
     random_indices = [random.randint(0, len(working_passwords) - 1) for _ in range(3)]
     for idx in random_indices:
         working_passwords.append(working_passwords[idx])
@@ -56,7 +50,6 @@ def analyze_passwords() -> None:
     min_len = criteria["min_length"]
 
     print(f"{'№':<3} | {'Пароль':<20} | {'Статус':<15}")
-    print("-" * 45)
 
     for i, pwd in enumerate(working_passwords, 1):
         has_digit = any(c.isdigit() for c in pwd)
