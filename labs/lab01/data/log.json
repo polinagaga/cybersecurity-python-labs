@@ -64,5 +64,159 @@
             "username": "admin_sec",
             "password": "WrongPassword123456"
         }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-29 12:36:00",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-29 12:36:00",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-29 12:36:49",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-29 12:36:49",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-29 12:38:54",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-29 12:38:54",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-29 12:43:34",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-29 12:43:34",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-29 12:44:47",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-29 12:44:47",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-09-29 12:45:05",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-09-29 12:45:05",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "success",
+        "timestamp": "2026-10-06 12:30:26",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "SuperSecretPass2026!Key1"
+        }
+    },
+    {
+        "event": "login",
+        "user": "admin_sec",
+        "result": "failure",
+        "timestamp": "2026-10-06 12:30:26",
+        "args": [],
+        "kwargs": {
+            "username": "admin_sec",
+            "password": "WrongPassword123456"
+        }
     }
 ]
