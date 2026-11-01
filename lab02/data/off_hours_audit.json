@@ -1,0 +1,45 @@
+{
+    "summary": {
+        "total_records": 29,
+        "off_hours_alerts_count": 5,
+        "mass_download_alerts_count": 0
+    },
+    "off_hours_alerts": [
+        {
+            "user_id": "u002",
+            "timestamp": "2026-09-21T23:40:00",
+            "resource": "/finance/payroll.csv",
+            "ip": "10.0.1.20",
+            "action": "DOWNLOAD"
+        },
+        {
+            "user_id": "u003",
+            "timestamp": "2026-09-22T05:20:00",
+            "resource": "/prod/secrets",
+            "ip": "10.0.1.30",
+            "action": "READ"
+        },
+        {
+            "user_id": "u005",
+            "timestamp": "2026-09-24T22:05:00",
+            "resource": "/finance/budget.xlsx",
+            "ip": "10.0.1.50",
+            "action": "DOWNLOAD"
+        },
+        {
+            "user_id": "u001",
+            "timestamp": "2026-09-26T10:00:00",
+            "resource": "/docs/weekend.txt",
+            "ip": "10.0.1.10",
+            "action": "READ"
+        },
+        {
+            "user_id": "u003",
+            "timestamp": "2026-09-27T13:00:00",
+            "resource": "/tmp/report.csv",
+            "ip": "10.0.1.30",
+            "action": "DELETE"
+        }
+    ],
+    "mass_download_alerts": []
+}
